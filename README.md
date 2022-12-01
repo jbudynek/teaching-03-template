@@ -1,6 +1,6 @@
 # Practicing packaging, containerization and monitoring
 
-This file is a step by step tutorial to practice basics of app packaging, containerization and monitoring. 
+This file is a step by step tutorial to practice basics of app packaging, containerization and monitoring. See working example at: https://github.com/jbudynek/teaching2022-3-working-example
 
 ## Core app and FastAPI
 - prepare your virtual environment
@@ -10,21 +10,21 @@ conda activate 221203_enseirb
 ```
 
 - the file structure: 
-  - app - holds python code for our application
-  - dockerfile - holds docker directive for containerization
-  - requirements.txt - hold list of python libs, make sure to keep it up to date during development
+  - `app` - holds python code for our application
+  - `Dockerfile` - holds docker directive for containerization
+  - `requirements.txt` - hold list of python libs, make sure to keep it up to date during development
 
 - write model instantiation code
-  - in app/model.py, write training code
+  - in `app/model.py`, write training code
 - write prediction code
-  - in app/model.py, write prediction code
+  - in `app/model.py`, write prediction code
 - test this code
 
-- wrap it in fastapi
-  - in app/main.py, create endpoints that call the mehods of model.py
+- wrap it in FastAPI
+  - in `app/main.py`, create endpoints that call the methods of `model.py`
 - try it in a fresh conda environment
-  - go to docs http://localhost:5000/do
-  - with curl
+  - go to docs `http://localhost:5000/do`
+  - with `curl`
 
 ```
 conda activate 221203_enseirb
@@ -34,7 +34,7 @@ python app/main.py
 
 ## Docker
 
-- write your Dockerfile
+- write your `Dockerfile`
   - choose base image
   - install requirements
   - copy app files
@@ -49,10 +49,10 @@ docker run -d --name fastapiml-app -p 5000:5000 fastapiml
 ```
 
 ## Monitoring
-- in model.py
+- in `model.py`
   - create a way to store features and predictions (in a list)
   - create a function to plot training data distribution and stored data distribution
-- in main.py 
+- in `main.py` 
   - modify predict endpoint to also call storage function in model
   - create endpoint to produce plot
 
