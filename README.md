@@ -14,6 +14,17 @@ conda activate 221203_enseirb
   - `Dockerfile` - holds docker directive for containerization
   - `requirements.txt` - hold list of python libs, make sure to keep it up to date during development
 
+```
+.
+├── Dockerfile
+├── app
+│   ├── __init__.py
+│   ├── main.py
+│   └── model.py
+└── requirements.txt
+```
+
+
 - write model instantiation code
   - in `app/model.py`, write training code
 - write prediction code
