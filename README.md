@@ -38,7 +38,7 @@ date during development
 - wrap it in FastAPI
   - in `app/main.py`, create endpoints that call the methods of `model.py`
 - try it in a fresh conda environment
-  - go to docs `http://localhost:5000/do`
+  - go to docs `http://localhost:5000/docs`
   - with `curl`
 
 ```bash
