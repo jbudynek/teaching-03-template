@@ -64,11 +64,9 @@ docker run -d --name fastapiml-app -p 5000:5000 fastapiml
 
 ## Monitoring
 
-- in `model.py`
+- in the relevant files
   - create a way to store features and predictions (in a list)
-  - create a function to plot training data distribution and stored
-data distribution
-- in `main.py`
+  - create a function to plot training data distribution and stored data distribution
   - modify predict endpoint to also call storage function in model
   - create endpoint to produce plot
 
