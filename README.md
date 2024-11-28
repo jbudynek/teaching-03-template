@@ -25,21 +25,20 @@ date during development
 ├── app
 │   ├── __init__.py
 │   ├── main.py
-│   └── model.py
+│   ├── model.py
+│   ├── persistence.py
+│   ├── schemas.py
+│   └── services.py
 └── requirements.txt
 ```
 
-- write model instantiation code
-  - in `app/model.py`, write training code
-- write prediction code
-  - in `app/model.py`, write prediction code
-- test this code
-
+- write model training and prediction code in `app/model.py`
+- write `app/services.py`, `app/services.py` and `app/persistence.py` together
 - wrap it in FastAPI
-  - in `app/main.py`, create endpoints that call the methods of `model.py`
+  - in `app/main.py`, create endpoints that call the methods of `app/services.py`
 - try it in a fresh conda environment
-  - go to docs `http://localhost:5000/docs`
-  - with `curl`
+  - go to docs `http://localhost:5000/docs` to do your testing
+  - or you can test with `curl`
 
 ```bash
 conda activate YYMMDD_ia_course
@@ -89,4 +88,4 @@ data distribution
 
 ## Notes
 
-Used in 2022 and 2023 with AI engineering students in Bordeaux.
+Used in 2022, 2023 and 2024 with AI engineering students in Bordeaux.
